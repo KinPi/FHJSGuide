@@ -20,5 +20,14 @@
             1 == 1
             true
         ```
-    3.     
+    3. undefined == null returns true
+    4. empty string evaluates to 0
+13.  "===" is strict equality. Only equal if same type an same value.
+14.  3 * "4" returns 12
+15. 80 / "10" returns 8  
+16. "10" - 5 returns 5
+17. You use either == or === for object references.
+18. undefined, null, 0, empty string and NaN is falsey. Everything else if truthy.
+19. Javascript supports both primitive and object strings.
+20.  
 
