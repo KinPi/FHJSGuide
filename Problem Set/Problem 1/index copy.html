@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Problem 2</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <h1>Problem #2</h1>
+        <script>
+            let n;
+            do {
+                n = Number(prompt("Enter a positive integer."));
+            } while (n <= 0);
+
+            for (let r = 1; r <= n; r++) {
+                let out = "";
+                for (let c = 1; c <= n - r; c++) {
+                    if (c % 2 == 1) {
+                        out += "#";
+                    }
+                    else {
+                        out += "O";
+                    }
+                }
+
+                for (let i = 1; i <= r; i++) {
+                    if (n % 2 == r % 2) {
+                        out += "#";
+                    }
+                    else {
+                        out += "O";
+                    }
+                } 
+                console.log(out);
+            }
+
+        </script>
+    </body>
+
+
+</html>
+
+
+<!-- #0#0#0
+#0#0##
+#0#000
+#0####
+#00000
+###### -->

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Problem 2</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <h1>Problem #2</h1>
+        <script>
+            let n;
+            do {
+                n = prompt("Enter a positive integer.");
+            } while (n <= 0);
+
+            for (let r = 1; r <= n; r++) {
+                let out = "";
+                for (let c = 1; c <= 2 * n; c++) {
+                    let modIndex = c%n;
+                    if (modIndex == 0) {
+                        modIndex = 5;
+                    }
+                    if (modIndex == r || modIndex == n - r + 1) {
+                        out += "*";
+                    }
+                    else {
+                        out += " ";
+                    }
+                }
+                console.log(out);
+            }
+
+        </script>
+    </body>
+
+
+</html>

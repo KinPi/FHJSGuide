@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Problem 2</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <h1>Problem #2</h1>
+        <script>
+            let n;
+            do {
+                n = Number(prompt("Enter a positive integer."));
+            } while (n <= 0);
+
+            let testIndex1;
+            let testIndex2;
+            if (n % 2 == 1) {
+                testIndex1 = 1;
+                testIndex2 = 0;
+            }
+            else {
+                testIndex1 = 0;
+                testIndex2 = 1;
+            }
+
+            for (let r = 0; r < n; r++) {
+                let out = "";
+                for (let c = 0; c < n; c++) {
+                    if (c % 2 == 0) {
+                        if (((r % 2) == testIndex1) && (r + c + 1 >= n)) {
+                            out += "O";
+                        }
+                        else {
+                            out += "#";
+                        }
+                    }
+                    else {
+                        if (((r % 2) == testIndex2) && (r + c + 1 >= n)) {
+                            out += "#";
+                        }
+                        else {
+                            out += "O";
+                        }
+                    }
+                }
+                console.log(out);
+            }
+
+        </script>
+    </body>
+
+
+</html>
+
+
+<!-- #0#0#0
+#0#0##
+#0#000
+#0####
+#00000
+###### -->
